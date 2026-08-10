@@ -14,7 +14,7 @@ jobs:
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
       - name: Extraer proyecto Android
-        run: unzip -q run: unzip -q ./*V3.6-FINAL-853x1844.zip -d android-project
+        run: unzip -q ./*V3.6-FINAL-853x1844.zip -d android-project
       - name: Generar wrapper
         working-directory: android-project
         run: gradle wrapper --gradle-version 8.13
