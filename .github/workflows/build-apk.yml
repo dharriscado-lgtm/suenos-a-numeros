@@ -20,7 +20,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Extraer proyecto Android
-        run: unzip -q suenos-a-numeros-android.zip -d android-project
+        run: unzip -q suenos-a-numeros-android-v2.zip -d android-project
 
       - name: Generar wrapper
         working-directory: android-project
