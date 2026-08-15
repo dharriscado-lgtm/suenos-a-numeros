@@ -23,15 +23,15 @@ jobs:
         run: unzip -q suenos-a-numeros-android.zip -d android-project
 
       - name: Generar wrapper
-        working-directory: android-project
+        working-directory: android-project/suenos-a-numeros-android-V3.6-FINAL-853x1844
         run: gradle wrapper --gradle-version 8.13
 
       - name: Compilar APK
-        working-directory: android-project
+        working-directory: android-project/suenos-a-numeros-android-V3.6-FINAL-853x1844
         run: ./gradlew assembleDebug
 
       - name: Publicar APK
         uses: actions/upload-artifact@v4
         with:
           name: suenos-a-numeros-apk
-          path: android-project/app/build/outputs/apk/debug/app-debug.apk
+          path: android-project/suenos-a-numeros-android-V3.6-FINAL-853x1844/app/build/outputs/apk/debug/app-debug.apk
